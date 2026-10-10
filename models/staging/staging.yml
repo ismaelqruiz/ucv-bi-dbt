@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+  - name: stg_sales
+    description: "Ventas limpias y tipadas."
+    columns:
+      - name: sale_id
+        data_tests:
+          - unique
+          - not_null
+      - name: product_id
+        data_tests:
+          - not_null
+
+  - name: stg_products
+    description: "Productos limpios y tipados."
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+      - name: product_name
+        data_tests:
+          - not_null
